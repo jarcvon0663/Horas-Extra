@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+html, body {
+    height: 90%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculadora {
+    flex: 1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff; /* Fondo similar a Facebook */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.calculadora {
+    max-height: 600px;
+    display: flex;
+    gap: 10px; /* Espacio entre los div internos */
+}
+
+.titulo h1 {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(0, 17, 255);
+}
+
+.titulo img {
+    width: 350px;
+    height: 500px;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    margin-top: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    flex: 1;
+    overflow-y: auto; /* Para permitir scroll en caso de ser necesario */
+}
+
+.imagen-calculadora {
+    max-width: 80%; /* Limita el ancho máximo de la imagen */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Centra la imagen y añade margen inferior */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #145dbf;
+}
+
+#resultado {
+    margin-top: 20px;
+    white-space: pre-line;
+}
+
+.info {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.footer{
+    position: relative;
+    --padding-container: 160px 0 50px ;
+    margin-top: auto;
+    padding: 10px;
+    background-color: #f1f1f1; /* Ajusta el color si es necesario */
+    text-align: center;
+
+}
+
+.footer__copyright{
+    padding-top: 30px;
+    border-top: 2px solid #918484;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .calculadora {
+        flex-direction: column;
+        gap: 10px; /* Ajusta el espacio entre los elementos */
+    }
+
+    .titulo img {
+        display: none;
+    }
+
+    .container {
+        background-color: white;
+        padding: 40px;
+        margin-top: 0;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        flex: 1;
+        overflow-y: auto; /* Para permitir scroll en caso de ser necesario */
+    }
+
+    form {
+        margin-top: 10px; /* Reduce el margen superior del formulario */
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 14px; /* Ajusta el tamaño de la fuente de los inputs */
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .footer__copyright{
+        padding-top: 10px;
+        border-top: 2px solid #918484;
+        text-align: center;
+    }
+
+
+}
+
