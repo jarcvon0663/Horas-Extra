@@ -5,29 +5,42 @@ function calcularPago() {
     const salario = parseFloat(document.getElementById('salario').value.replace(/\./g, ''));
     const horasExtraDiurnas = parseFloat(document.getElementById('horasExtraDiurnas').value) || 0;
     const horasExtraNocturnas = parseFloat(document.getElementById('horasExtraNocturnas').value) || 0;
+	const horasRecargoNocturno = parseFloat(document.getElementById('horasRecargoNocturno').value) || 0;
     const horasDomFest = parseFloat(document.getElementById('horasDomFest').value) || 0;
     const horasExtraDomFestDiurnas = parseFloat(document.getElementById('horasExtraDomFestDiurnas').value) || 0;
+	const horasRecargoDomFestDiurnoNoCom = parseFloat(document.getElementById('horasRecargoDomFestDiurnoNoCom').value) || 0;
     const horasExtraDomFestNocturnas = parseFloat(document.getElementById('horasExtraDomFestNocturnas').value) || 0;
+	const horasRecargoDomFestNocturnoNoCom = parseFloat(document.getElementById('horasRecargoDomFestNocturnoNoCom').value) || 0;
+	const horasRecargoDomFestNocturnoCom = parseFloat(document.getElementById('horasRecargoDomFestNocturnoCom').value) || 0;
 
-    const valorHora = salario / 230; // 240 horas laborales mensuales
+    const valorHora = salario / 230; // 230 horas laborales mensuales
     const pagoExtraDiurna = horasExtraDiurnas * valorHora * 1.25;
     const pagoExtraNocturna = horasExtraNocturnas * valorHora * 1.75;
+	const pagoRecargoNocturno = horasRecargoNocturno * valorHora * 0.35;
     const pagoDomFest = horasDomFest * valorHora * 1.75;
     const pagoExtraDomFestDiurna = horasExtraDomFestDiurnas * valorHora * 2;
+	const pagoRecargoDomFestDiurnoNoCom = horasRecargoDomFestDiurnoNoCom * valorHora * 1.75;
     const pagoExtraDomFestNocturna = horasExtraDomFestNocturnas * valorHora * 2.5;
+	const pagoRecargoDomFestNocturnoNoCom = horasRecargoDomFestNocturnoNoCom * valorHora * 2.1;
+	const pagoRecargoDomFestNocturnoCom = horasRecargoDomFestNocturnoCom * valorHora * 1.1;
 
-    const totalPago = pagoExtraDiurna + pagoExtraNocturna + pagoDomFest + pagoExtraDomFestDiurna + pagoExtraDomFestNocturna;
+    const totalPago = pagoExtraDiurna + pagoExtraNocturna + pagoRecargoNocturno + pagoDomFest + pagoExtraDomFestDiurna + pagoRecargoDomFestDiurnoNoCom + pagoExtraDomFestNocturna + pagoRecargoDomFestNocturnoNoCom + pagoRecargoDomFestNocturnoCom;
 
     const resultadoTexto = `
         Profesional: ${nombre}
         Mes: ${mes} ${año}
 
         Salario Mensual: ${separarMiles(salario.toFixed(0))}
-        Extra Diurnas: ${separarMiles(pagoExtraDiurna.toFixed(0))} | ${horasExtraDiurnas.toFixed(1)} horas
-        Extra Nocturnas: ${separarMiles(pagoExtraNocturna.toFixed(0))} | ${horasExtraNocturnas.toFixed(1)} horas
-        Recargo Domingos/Festivos: ${separarMiles(pagoDomFest.toFixed(0))} | ${horasDomFest.toFixed(1)} horas
-        Extra Diurnas en Dom/Fest: ${separarMiles(pagoExtraDomFestDiurna.toFixed(0))} | ${horasExtraDomFestDiurnas.toFixed(1)} horas
-        Extra Nocturnas en Dom/Fest: ${separarMiles(pagoExtraDomFestNocturna.toFixed(0))} | ${horasExtraDomFestNocturnas.toFixed(1)} horas
+        Extra Diurna: ${separarMiles(pagoExtraDiurna.toFixed(0))} | ${horasExtraDiurnas.toFixed(1)} horas
+        Extra Nocturna: ${separarMiles(pagoExtraNocturna.toFixed(0))} | ${horasExtraNocturnas.toFixed(1)} horas
+		Recargo Nocturno: ${separarMiles(pagoRecargoNocturno.toFixed(0))} | ${horasRecargoNocturno.toFixed(1)} horas
+        Recargo Dom/Fest: ${separarMiles(pagoDomFest.toFixed(0))} | ${horasDomFest.toFixed(1)} horas
+        Extra Diurna en Dom/Fest: ${separarMiles(pagoExtraDomFestDiurna.toFixed(0))} | ${horasExtraDomFestDiurnas.toFixed(1)} horas
+		Recargo Dom/Fes Diurno No Compensado: ${separarMiles(pagoRecargoDomFestDiurnoNoCom.toFixed(0))} | ${horasRecargoDomFestDiurnoNoCom.toFixed(1)} horas
+        Extra Nocturna en Dom/Fest: ${separarMiles(pagoExtraDomFestNocturna.toFixed(0))} | ${horasExtraDomFestNocturnas.toFixed(1)} horas
+		Recargo Dom/Fes Nocturna No Compensado: ${separarMiles(pagoRecargoDomFestNocturnoNoCom.toFixed(0))} | ${horasRecargoDomFestNocturnoNoCom.toFixed(1)} horas
+		Recargo Dom/Fes Nocturna Compensado: ${separarMiles(pagoRecargoDomFestNocturnoCom.toFixed(0))} | ${horasRecargoDomFestNocturnoCom.toFixed(1)} horas
+		
 
         Total a pagar: COP ${separarMiles(totalPago.toFixed(0))}
     `;
