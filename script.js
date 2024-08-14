@@ -19,7 +19,7 @@ function calcularPago() {
     const totalPago = pagoExtraDiurna + pagoExtraNocturna + pagoDomFest + pagoExtraDomFestDiurna + pagoExtraDomFestNocturna;
 
     const resultadoTexto = `
-        Trabajador: ${nombre}
+        Profesional: ${nombre}
         Mes: ${mes} ${año}
 
         Salario Mensual: ${separarMiles(salario.toFixed(0))}
