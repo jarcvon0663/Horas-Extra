@@ -45,20 +45,37 @@
                     <p class="info">Horas extras nocturnas: Se pagan con un recargo del 75% sobre el valor de la hora
                         ordinaria.
                     </p>
+					
+					<label for="horasExtraNocturnas">Horas Recargo Nocturno:</label>
+                    <input type="number" id="horasRecargoNocturno">
+                    <p class="info">Horas Recargo Nocturna: Se pagan con un recargo del 35% sobre el valor de la hora
+                        ordinaria.
+                    </p>
 
-                    <label for="horasDomFest">Horas en Domingo o Festivo:</label>
+                    <label for="horasDomFest">Horas Recargo en Dom/Fest:</label>
                     <input type="number" id="horasDomFest">
                     <p class="info">Recargo dominical y festivo: Se paga con un recargo del 75% sobre el valor de la
-                        hora
-                        ordinaria.</p>
+                        hora ordinaria.</p>
 
-                    <label for="horasExtraDomFestDiurnas">Horas Extra Diurnas en Domingo o Festivo:</label>
+                    <label for="horasExtraDomFestDiurnas">Horas Extra Diurnas en Dom/Fest:</label>
                     <input type="number" id="horasExtraDomFestDiurnas">
                     <p class="info">Se aplican ambos recargos (75% + 25% diurna).</p>
+					
+					<label for="horasExtraDomFestDiurnas">Horas Extra Diurnas en Dom/Fest no compensado:</label>
+                    <input type="number" id="horasRecargoDomFestDiurnoNoCom">
+                    <p class="info">Se aplican ambos recargos (175%).</p>
 
-                    <label for="horasExtraDomFestNocturnas">Horas Extra Nocturnas en Domingo o Festivo:</label>
+                    <label for="horasExtraDomFestNocturnas">Horas Extra Nocturnas en Dom/Fest:</label>
                     <input type="number" id="horasExtraDomFestNocturnas">
                     <p class="info">Se aplican ambos recargos (75% + 75% nocturna).</p>
+					
+					<label for="horasExtraDomFestNocturnas">Horas Extra Nocturnas en Dom/Fest no compensado:</label>
+                    <input type="number" id="horasRecargoDomFestNocturnoNoCom">
+                    <p class="info">Se aplican ambos recargos (210%).</p>
+					
+					<label for="horasExtraDomFestNocturnas">Horas Recargo Nocturno en Dom/Fest compensado:</label>
+                    <input type="number" id="horasRecargoDomFestNocturnoCom">
+                    <p class="info">Se aplican ambos recargos (35% nocturna + 75% dom/fest).</p>
 
                     <button type="button" onclick="calcularPago()">Calcular</button>
                 </form>
