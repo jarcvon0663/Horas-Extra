@@ -26,24 +26,56 @@ function calcularPago() {
 
     const totalPago = pagoExtraDiurna + pagoExtraNocturna + pagoRecargoNocturno + pagoDomFest + pagoExtraDomFestDiurna + pagoRecargoDomFestDiurnoNoCom + pagoExtraDomFestNocturna + pagoRecargoDomFestNocturnoNoCom + pagoRecargoDomFestNocturnoCom;
 
-    const resultadoTexto = `
-        Profesional: ${nombre}
-        Mes: ${mes} ${año}
+    let resultadoTexto = `
+    Profesional: ${nombre}
+    Mes: ${mes} ${año}
 
-        Salario Mensual: ${separarMiles(salario.toFixed(0))}
-        Extra Diurna: ${separarMiles(pagoExtraDiurna.toFixed(0))} | ${horasExtraDiurnas.toFixed(1)} horas
-        Extra Nocturna: ${separarMiles(pagoExtraNocturna.toFixed(0))} | ${horasExtraNocturnas.toFixed(1)} horas
-		Recargo Nocturno: ${separarMiles(pagoRecargoNocturno.toFixed(0))} | ${horasRecargoNocturno.toFixed(1)} horas
-        Recargo Dom/Fest: ${separarMiles(pagoDomFest.toFixed(0))} | ${horasDomFest.toFixed(1)} horas
-        Extra Diurna en Dom/Fest: ${separarMiles(pagoExtraDomFestDiurna.toFixed(0))} | ${horasExtraDomFestDiurnas.toFixed(1)} horas
-		Recargo Dom/Fes Diurno No Compensado: ${separarMiles(pagoRecargoDomFestDiurnoNoCom.toFixed(0))} | ${horasRecargoDomFestDiurnoNoCom.toFixed(1)} horas
-        Extra Nocturna en Dom/Fest: ${separarMiles(pagoExtraDomFestNocturna.toFixed(0))} | ${horasExtraDomFestNocturnas.toFixed(1)} horas
-		Recargo Dom/Fes Nocturna No Compensado: ${separarMiles(pagoRecargoDomFestNocturnoNoCom.toFixed(0))} | ${horasRecargoDomFestNocturnoNoCom.toFixed(1)} horas
-		Recargo Dom/Fes Nocturna Compensado: ${separarMiles(pagoRecargoDomFestNocturnoCom.toFixed(0))} | ${horasRecargoDomFestNocturnoCom.toFixed(1)} horas
-		
-
-        Total a pagar: COP ${separarMiles(totalPago.toFixed(0))}
+    Salario Mensual: ${separarMiles(salario.toFixed(0))}
     `;
+
+	// Agregando cada campo solo si su valor es igual o superior a 1
+	if (pagoExtraDiurna >= 1) {
+	    resultadoTexto += `
+	    Extra Diurna: ${separarMiles(pagoExtraDiurna.toFixed(0))} | ${horasExtraDiurnas.toFixed(1)} horas`;
+	}
+	if (pagoExtraNocturna >= 1) {
+	    resultadoTexto += `
+	    Extra Nocturna: ${separarMiles(pagoExtraNocturna.toFixed(0))} | ${horasExtraNocturnas.toFixed(1)} horas`;
+	}
+	if (pagoRecargoNocturno >= 1) {
+	    resultadoTexto += `
+	    Recargo Nocturno: ${separarMiles(pagoRecargoNocturno.toFixed(0))} | ${horasRecargoNocturno.toFixed(1)} horas`;
+	}
+	if (pagoDomFest >= 1) {
+	    resultadoTexto += `
+	    Recargo Dom/Fest: ${separarMiles(pagoDomFest.toFixed(0))} | ${horasDomFest.toFixed(1)} horas`;
+	}
+	if (pagoExtraDomFestDiurna >= 1) {
+	    resultadoTexto += `
+	    Extra Diurna en Dom/Fest: ${separarMiles(pagoExtraDomFestDiurna.toFixed(0))} | ${horasExtraDomFestDiurnas.toFixed(1)} horas`;
+	}
+	if (pagoRecargoDomFestDiurnoNoCom >= 1) {
+	    resultadoTexto += `
+	    Recargo Dom/Fes Diurno No Compensado: ${separarMiles(pagoRecargoDomFestDiurnoNoCom.toFixed(0))} | ${horasRecargoDomFestDiurnoNoCom.toFixed(1)} horas`;
+	}
+	if (pagoExtraDomFestNocturna >= 1) {
+	    resultadoTexto += `
+	    Extra Nocturna en Dom/Fest: ${separarMiles(pagoExtraDomFestNocturna.toFixed(0))} | ${horasExtraDomFestNocturnas.toFixed(1)} horas`;
+	}
+	if (pagoRecargoDomFestNocturnoNoCom >= 1) {
+	    resultadoTexto += `
+	    Recargo Dom/Fes Nocturna No Compensado: ${separarMiles(pagoRecargoDomFestNocturnoNoCom.toFixed(0))} | ${horasRecargoDomFestNocturnoNoCom.toFixed(1)} horas`;
+	}
+	if (pagoRecargoDomFestNocturnoCom >= 1) {
+	    resultadoTexto += `
+	    Recargo Dom/Fes Nocturna Compensado: ${separarMiles(pagoRecargoDomFestNocturnoCom.toFixed(0))} | ${horasRecargoDomFestNocturnoCom.toFixed(1)} horas`;
+	}
+	
+	// Agregar el total siempre
+	resultadoTexto += `
+	    
+	Total a pagar: COP ${separarMiles(totalPago.toFixed(0))}
+	`;
 
     document.getElementById('resultado').innerText = resultadoTexto;
     document.getElementById('descargarPDF').style.display = 'block';
