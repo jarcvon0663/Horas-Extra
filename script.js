@@ -9,7 +9,7 @@ function calcularPago() {
     const horasExtraDomFestDiurnas = parseFloat(document.getElementById('horasExtraDomFestDiurnas').value) || 0;
     const horasExtraDomFestNocturnas = parseFloat(document.getElementById('horasExtraDomFestNocturnas').value) || 0;
 
-    const valorHora = salario / 240; // 240 horas laborales mensuales
+    const valorHora = salario / 230; // 240 horas laborales mensuales
     const pagoExtraDiurna = horasExtraDiurnas * valorHora * 1.25;
     const pagoExtraNocturna = horasExtraNocturnas * valorHora * 1.75;
     const pagoDomFest = horasDomFest * valorHora * 1.75;
