@@ -168,6 +168,7 @@ button:hover {
     }
 
     input[type="text"],
+    input[type="month"],
     input[type="number"] {
         font-size: 14px; /* Ajusta el tamaño de la fuente de los inputs */
     }
