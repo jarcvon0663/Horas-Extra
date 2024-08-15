@@ -154,7 +154,7 @@ button:hover {
         align-items: center; /* Alinea verticalmente el h1 y la imagen */
         justify-content: space-between;
         margin: 0;
-        padding-top: 40px;
+        padding-top: 10px;
         height: auto; /* Ajusta la altura automáticamente */
     }
 
