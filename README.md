@@ -1,6 +1,6 @@
 # Horas-Extra
 
-Calculadora para conocer el total de las horas extra facturadas por un empleado mensualmente con generación de reporte en PDF
+Calculadora para conocer el valor total de las horas extra facturadas por un empleado y el costo para el cliente, mensualmente con generación de reporte en PDF
 
 14 de agosto 2024, se actualiza de 240 a 230 horas, se incluyen 4 tipos de recargo, se ajusta el reporte y se actualiza el logo. Se hace correción en el archivo de estilo para mejorar la presentación del logo.
 
