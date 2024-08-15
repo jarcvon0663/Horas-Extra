@@ -15,7 +15,7 @@ body {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #ffffff; /* Fondo similar a Facebook */
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -32,13 +32,14 @@ body {
 
 .titulo h1 {
     text-align: center;
+    width: 80%;
     font-size: 24px;
     color: rgb(0, 17, 255);
 }
 
 .titulo img {
     width: 350px;
-    height: 500px;
+    height: 350px;
 }
 
 .container {
@@ -108,7 +109,7 @@ button:hover {
     --padding-container: 160px 0 50px ;
     margin-top: auto;
     padding: 10px;
-    background-color: #f1f1f1; /* Ajusta el color si es necesario */
+    background-color: #f1f1f1;
     text-align: center;
 
 }
@@ -122,21 +123,37 @@ button:hover {
 @media (max-width: 768px) {
     .calculadora {
         flex-direction: column;
+        max-height: 800px;
+        max-width: 700px;
         gap: 10px; /* Ajusta el espacio entre los elementos */
     }
 
+    .titulo h1 {
+        text-align: center;
+
+        margin-top: 10px;
+        margin: auto;
+        max-width: 250px;
+        
+        font-size: 20px;
+        color: rgb(0, 17, 255);
+    }
+
     .titulo img {
-        display: none;
+        display: flex;
+        justify-content: center;
+        height: 110px;
+        width: 120px;
     }
 
     .container {
         background-color: white;
-        padding: 40px;
-        margin-top: 0;
+        padding: 35px;
+        margin: auto;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 600px;
+        width: 80%;
+        max-width: 325px;
         flex: 1;
         overflow-y: auto; /* Para permitir scroll en caso de ser necesario */
     }
