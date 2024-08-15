@@ -6,4 +6,4 @@ Calculadora para conocer el total de las horas extra facturadas por un empleado 
 
 15 de agosto 2024, se agrega el costo para el cliente en dos escenarios, cuando recibe menos y más de 10 smmlv y se ajustan los estilos para mejorar la UX y hacerlo responsive.
 
-Creado por Arturo Rios Agosto 2024
+Creado por Arturo Rios Castaño Agosto 2024
