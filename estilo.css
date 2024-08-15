@@ -73,11 +73,16 @@ label {
 }
 
 input[type="text"],
+input[type="month"],
 input[type="number"] {
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-family: inherit; /* Heredar la fuente del elemento padre */
+    font-size: 16px; /* Asegurarse de que el tamaño de la fuente sea el mismo */
+    color: #333; /* Asegurarse de que el color del texto sea consistente */
+    box-sizing: border-box;
 }
 
 button {

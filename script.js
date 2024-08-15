@@ -1,7 +1,6 @@
 function calcularPago() {
     const nombre = document.getElementById('nombre').value;
-    const mes = document.getElementById('mes').value;
-    const año = parseInt(document.getElementById('año').value);
+	const mesAño = document.getElementById('mesAño').value;
     const salario = parseFloat(document.getElementById('salario').value.replace(/\./g, ''));
     const horasExtraDiurnas = parseFloat(document.getElementById('horasExtraDiurnas').value) || 0;
     const horasExtraNocturnas = parseFloat(document.getElementById('horasExtraNocturnas').value) || 0;
@@ -36,7 +35,7 @@ function calcularPago() {
 
     let resultadoTexto = `
     Profesional: ${nombre}
-    Mes: ${mes} ${año}
+    Mes: ${mesAño}
 
     Salario Mensual: ${separarMiles(salario.toFixed(0))}
     `;
@@ -104,8 +103,7 @@ function descargarPDF() {
     const doc = new jsPDF();
 
     const nombre = document.getElementById('nombre').value;
-    const mes = document.getElementById('mes').value;
-    const año = document.getElementById('año').value;
+	const mesAño = document.getElementById('mesAño').value;
     const resultado = document.getElementById('resultado').innerText;
 
     // Base64 del logo de Softtek
@@ -115,11 +113,11 @@ function descargarPDF() {
     doc.addImage(logoBase64, 'PNG', 75, 5, 50, 50);
 
     // Agregar el texto debajo del logo
-    doc.text(`Horas Extra correspondientes a:`, 10, 60);
+    doc.text(`Horas Extra correspondientes a`, 10, 60);
     doc.text(resultado, 10, 70);
 
     // Guardar el archivo PDF
-    doc.save(`Horas_Extra_${nombre}_${mes}_${año}.pdf`);
+    doc.save(`Horas_Extra_${nombre}_${mesAño}.pdf`);
 }
 
 
