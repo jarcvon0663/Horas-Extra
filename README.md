@@ -6,4 +6,6 @@ Calculadora para conocer el valor total de las horas extra facturadas por un emp
 
 15 de agosto 2024, se agrega el costo para el cliente en dos escenarios, cuando recibe menos y más de 10 smmlv y se ajustan los estilos para mejorar la UX y hacerlo responsive.
 
+21 de agosto, se agregan emojis de reloj
+
 Creado por Jeison Arturo Rios Castaño Agosto 2024
