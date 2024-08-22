@@ -152,7 +152,6 @@ button:hover {
     .titulo {
         padding-top: 2px; /* Ajusta el padding superior */
         margin: 0; /* Elimina márgenes innecesarios */
-        padding-left: 10px;
     }
 
     .subtitulo {
@@ -160,13 +159,13 @@ button:hover {
         align-items: center; /* Alinea verticalmente el h1 y la imagen */
         justify-content: space-between;
         margin: 0;
+        padding-left: 20px;
     }
 
     .titulo h1 {
         text-align: left; /* Alinea el texto a la izquierda */
         margin: 0;
         width: 50%;
-        padding-left: 10px; /* Reduce el padding izquierdo */
         font-size: 18px;
         color: rgb(1, 8, 107);
     }
