@@ -8,6 +8,6 @@ Calculadora para conocer el valor total de las horas extra facturadas por un emp
 
 21 de agosto, se agregan emojis de reloj, personas, calendario, operadores matematicos, pdf y salario.
 
-22 de agosto, se ajusta el padding al título.
+22 de agosto, se ajusta el padding al título en el media query.
 
 Creado por Jeison Arturo Rios Castaño Agosto 2024
