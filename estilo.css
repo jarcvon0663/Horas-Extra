@@ -152,6 +152,7 @@ button:hover {
     .titulo {
         padding-top: 2px; /* Ajusta el padding superior */
         margin: 0; /* Elimina márgenes innecesarios */
+        padding-left: 10px;
     }
 
     .subtitulo {
