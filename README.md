@@ -10,4 +10,6 @@ Calculadora para conocer el valor total de las horas extra facturadas por un emp
 
 22 de agosto, se ajusta el padding al título en el media query.
 
+10 de septiembre, se incluye la palabra Softtekian.
+
 Creado por Jeison Arturo Rios Castaño Agosto 2024
