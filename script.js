@@ -34,7 +34,7 @@ function calcularPago() {
 	}
 
     let resultadoTexto = `
-    Profesional: ${nombre}
+    Softtekian: ${nombre}
     Mes: ${mesAño}
 
     Salario Mensual: ${separarMiles(salario.toFixed(0))}
@@ -81,7 +81,7 @@ function calcularPago() {
 	// Agregar el total siempre
 	resultadoTexto += `
 	    
-	Total a pagar al empleado: COP ${separarMiles(totalPago.toFixed(0))}
+	Total a pagar al Softtekian: COP ${separarMiles(totalPago.toFixed(0))}
 	Costo total cliente: COP ${separarMiles(costoCliente.toFixed(0))}
 	`;
 
