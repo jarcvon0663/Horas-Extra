@@ -12,4 +12,6 @@ Calculadora para conocer el valor total de las horas extra facturadas por un emp
 
 10 de septiembre, se incluye la palabra Softtekian y se separan los recargos de las extras.
 
+17 de enero, se actualizó el SMMLV a 2025
+
 Creado por Jeison Arturo Rios Castaño Agosto 2024
