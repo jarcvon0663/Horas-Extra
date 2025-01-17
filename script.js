@@ -11,7 +11,7 @@ function calcularPago() {
     const horasExtraDomFestNocturnas = parseFloat(document.getElementById('horasExtraDomFestNocturnas').value) || 0;
 	const horasRecargoDomFestNocturnoNoCom = parseFloat(document.getElementById('horasRecargoDomFestNocturnoNoCom').value) || 0;
 	const horasRecargoDomFestNocturnoCom = parseFloat(document.getElementById('horasRecargoDomFestNocturnoCom').value) || 0;
-	const smmlv = 1300000; // Valor del salario mínimo mensual legal vigente
+	const smmlv = 1423500; // Valor del salario mínimo mensual legal vigente 2025
 
     const valorHora = salario / 230; // 230 horas laborales mensuales
     const pagoExtraDiurna = horasExtraDiurnas * valorHora * 1.25;
@@ -82,7 +82,7 @@ function calcularPago() {
 	resultadoTexto += `
 	    
 	Total a pagar al Softtekian: COP ${separarMiles(totalPago.toFixed(0))}
-	Costo total cliente: COP ${separarMiles(costoCliente.toFixed(0))}
+	Costo aproximado cliente: COP ${separarMiles(costoCliente.toFixed(0))}
 	`;
 
     document.getElementById('resultado').innerText = resultadoTexto;
